@@ -1,12 +1,1 @@
-{% extends "base.html" %}
 
-{% block conteudo %}
-<form action="/dados" method="post">
-    <label for="valor">Doador: </label>
-    <input type="text" name="doador" id="nome">
-    <label for="valor">Valor: </label>
-    <input type="float" name="valor" id="valor">
-    <label for="data">Data: </label>
-    <input type="date" name="data" id="data">
-    <button type="submit">Enviar </button>
-{% endblock %}
