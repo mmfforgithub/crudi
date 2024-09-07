@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages() %} 
+    {% if mensagens %}     
+        {% for msg in mensagens %}
+           {{ msg }}
+        {% endfor %}
+    {% endif %}
+    
+    <form action="/usuario/editasave" method="post">
+        <input type="hidden" name = "id_doacao" value="{{dados.id_doacao}}">
+        <label for="doador">Doador: </label>
+        <input type="text" name="doador" id="doador" value="{{dados.doador}}">
+        <label for="valor">Valor: </label>
+        <input type="number" name="valor" id="valor" value="{{dados.valor}}">
+        <label for="data">Data: </label>
+        <input type="date" name="data" id="data" value="{{dados.data}">
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}
