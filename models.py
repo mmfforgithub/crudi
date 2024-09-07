@@ -1,6 +1,6 @@
 from database import db
 
-class Usuario(db.Model):
+class Doacao(db.Model):
     __tablename__ = "usuario"
     id_doacao = db.Column(db.Integer, primary_key=True)
     doacao = db.Column(db.String(100))
