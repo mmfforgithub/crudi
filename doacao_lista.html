@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    Index da Aula
+    <a href="/doacao/add">Adicionar +</a>
+    <table>
+        <tr>
+            <th>Doador</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Editar</th>
+            <th>Remover</th>
+        </tr>
+        {% for doacao in dados %}
+        <tr>
+            <td>{{doacao.doador}}</td>
+            <td>{{doacao.valor}}</td>
+            <td>{{doacao.data}}</td>
+            <td>
+                <a href="/doacao/edita/{{doacao.id_doacao}}">Editar</a>
+            </td>
+            <td>
+                <a href="/doacao/remove/{{doacao.id_doacao}}">Remover</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
