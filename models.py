@@ -1,7 +1,7 @@
 from database import db
 
 class Doacao(db.Model):
-    __tablename__ = "usuario"
+    __tablename__ = "doacao"
     id_doacao = db.Column(db.Integer, primary_key=True)
     doador = db.Column(db.String(100))
     valor = db.Column(db.Float(10, 2))
