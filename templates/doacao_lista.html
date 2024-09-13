@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
-    Index da Aula
-    <a href="/doacao/add">Adicionar +</a>
+    <a href="add">Adicionar +</a>
     <table>
         <tr>
             <th>Doador</th>
@@ -17,10 +16,10 @@
             <td>{{doacao.valor}}</td>
             <td>{{doacao.data}}</td>
             <td>
-                <a href="/doacao/edita/{{doacao.id_doacao}}">Editar</a>
+                <a href="/edita/{{doacao.id_doacao}}">Editar</a>
             </td>
             <td>
-                <a href="/doacao/remove/{{doacao.id_doacao}}">Remover</a>
+                <a href="/remove/{{doacao.id_doacao}}">Remover</a>
             </td>
         </tr>
         {% endfor %}

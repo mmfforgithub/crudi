@@ -1,15 +1,56 @@
-body{
-    background-color: yellowgreen;
+* {
+
+    box-sizing: border-box;
+
+    border: 0;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: black;
+
 }
 
-a, input {
-    display: block;
+
+:root {
+
+    --primary: #FDAE02;
+
+    --secondary: #5A5F64;
+
+    --black: #000;
+
 }
-img {
-    width: 500px;
+
+
+nav {
+
+    background-color: var(--primary);
+
 }
-table,
-tr, td, th{
-    border: 1px solid black;
+
+main {
+
+    margin: 14px;
+
+}
+
+
+table {
+
+    width: 100%;
+    background-color: var(--secondary);
+
+}
+
+
+table, td, tr, th{
+
+    padding: 1rem;
+
+    border: 1px solid var(--black);
+
     border-collapse: collapse;
+
 }

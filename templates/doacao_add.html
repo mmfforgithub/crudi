@@ -8,14 +8,13 @@
         {% endfor %}
     {% endif %}
     
-    <form action="/usuario/editasave" method="post">
-        <input type="hidden" name = "id_doacao" value="{{dados.id_doacao}}">
+    <form action="/save" method="post">
         <label for="doador">Doador: </label>
-        <input type="text" name="doador" id="doador" value="{{dados.doador}}">
+        <input type="text" name="doador" id="doador">
         <label for="valor">Valor: </label>
-        <input type="number" name="valor" id="valor" value="{{dados.valor}}">
+        <input type="number" name="valor" id="valor">
         <label for="data">Data: </label>
-        <input type="date" name="data" id="data" value="{{dados.data}">
+        <input type="date" name="data" id="data">
         <button type="submit">Salvar</button>
     </form>
 {% endblock %}
